@@ -23,10 +23,10 @@
     "prebuild": "npm run clean",
     "build": "npm run build:dev && npm run build:dist && npm run build:exe && npm run format:clis && npm run minify-and-compare",
     "build:dev": "rollup -c .gnv/rollup/dev.es.js && rollup -c .gnv/rollup/dev.cjs.js",
-    "build:dist": "rollup -c .gnv/rollup/dist.es.js && rollup -c .gnv/rollup/dist.cjs.js && npm run minify:dist",
+    "build:dist": "rollup --silent -c .gnv/rollup/dist.es.js && rollup --silent -c .gnv/rollup/dist.cjs.js && npm run minify:dist",
     "build:exe": "node .gnv/npm/buildExes.js && npm run exe:save",
     "postbuild": "npm run test",
-    "minify:dist": "rollup -c .gnv/rollup/dist.minify.js",
+    "minify:dist": "rollup --silent -c .gnv/rollup/dist.minify.js",
     "minify:freeze": "node .gnv/web-widgets/minifyFreeze.js && html-minifier-terser --collapse-whitespace --remove-comments --remove-script-type-attributes --minify-css true widget.freeze.html -o widget.freeze.html && gzip -9 -c widget.freeze.html > widget.freeze.html.gz",
     "exe": "enable-browser-mode dist/exe.js",
     "exe:freeze": "enable-browser-mode dist/exe.freeze.js",
@@ -54,8 +54,7 @@
     "chalk": "4.1.0",
     "chokidar": "3.4.0",
     "ora": "4.0.4",
-    "tree-node-cli": "1.4.0",
-    "web-widgets": "latest"
+    "tree-node-cli": "1.4.0"
   },
   "peerDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "0.26.0",
@@ -81,27 +80,5 @@
     "rollup-plugin-import-meta-url": "5.0.0",
     "rollup-plugin-preserve-shebang": "1.0.1",
     "serve": "latest"
-  },
-  "dependencies": {
-    "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
-    "@rollup/plugin-commonjs": "^15.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
-    "builtin-modules": "^3.1.0",
-    "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
-    "glob": "^7.1.6",
-    "google-closure-compiler": "^20200719.0.0",
-    "inline-source": "^7.2.0",
-    "install-peerdeps": "^2.0.3",
-    "mocha": "^8.2.0",
-    "rollup": "^2.21.0",
-    "rollup-plugin-bundle-size": "^1.0.3",
-    "rollup-plugin-class-fields-to-getters": "^1.0.0",
-    "rollup-plugin-disable-packages": "^3.0.0",
-    "rollup-plugin-export-default": "^1.4.0",
-    "rollup-plugin-import-meta-url": "^5.0.0",
-    "rollup-plugin-preserve-shebang": "^1.0.1",
-    "web-widgets": "^1.1.4"
   }
 }
