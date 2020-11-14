@@ -17,7 +17,7 @@
   },
   "scripts": {
     "create-bin": "mkdir -p dist && touch dist/cli.cjs",
-    "cold-start": "npm run gnv-install-dev && gnv-dev build",
+    "cold-start": "npx gnv get-peer-deps gnv web-widgets && npm run build",
     "gnv-install": "npm run create-bin && node .gnv/npm/install.js",
     "gnv-install-dev": "npm run create-bin && node .gnv/npm/installDev.js",
     "prebuild": "npm run clean",
