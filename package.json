@@ -48,6 +48,6 @@
     "url": ""
   },
   "dependencies": {
-    "gnv": "latest"
+    "gnv": "^12.1.35"
   }
 }
