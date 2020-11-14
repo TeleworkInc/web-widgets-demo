@@ -47,38 +47,7 @@
     "type": "git",
     "url": ""
   },
-  "homepage": "",
-  "gnvDependencies": {
-    "await-shell": "latest",
-    "commander": "6.0.0",
-    "chalk": "4.1.0",
-    "chokidar": "3.4.0",
-    "ora": "4.0.4",
-    "tree-node-cli": "1.4.0"
-  },
-  "peerDependencies": {
-    "@ampproject/rollup-plugin-closure-compiler": "0.26.0",
-    "@rollup/plugin-commonjs": "15.0.0",
-    "@rollup/plugin-json": "4.1.0",
-    "@rollup/plugin-node-resolve": "9.0.0",
-    "builtin-modules": "latest",
-    "chai": "4.2.0",
-    "chai-as-promised": "7.1.1",
-    "enable-browser-mode": "latest",
-    "inline-source": "7.2.0",
-    "reload": "3.1.0",
-    "express": "^4.17.1",
-    "glob": "7.1.6",
-    "google-closure-compiler": "20200719.0.0",
-    "html-minifier-terser": "5.1.1",
-    "mocha": "8.0.1",
-    "rollup": "2.21.0",
-    "rollup-plugin-bundle-size": "latest",
-    "rollup-plugin-class-fields-to-getters": "1.0.0",
-    "rollup-plugin-disable-packages": "3.0.0",
-    "rollup-plugin-export-default": "1.4.0",
-    "rollup-plugin-import-meta-url": "5.0.0",
-    "rollup-plugin-preserve-shebang": "1.0.1",
-    "serve": "latest"
+  "dependencies": {
+    "gnv": "latest"
   }
 }
