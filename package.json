@@ -1,5 +1,5 @@
 {
-  "name": "web-widgets-template",
+  "name": "web-widgets-demo",
   "version": "0.1.1",
   "description": "",
   "author": "Christian Lewis <hello@trytelework.com>",
@@ -48,6 +48,7 @@
     "url": ""
   },
   "dependencies": {
+    "await-shell": "^2.3.1",
     "gnv": "^12.1.35"
   }
 }
